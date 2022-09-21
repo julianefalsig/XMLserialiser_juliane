@@ -14,8 +14,9 @@ public class JavaSerializer {
 
     private static User readFromFile() {
         try {
-            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("User.obj"));
-            Object o = objectInputStream.readObject();
+            FileInputStream fIn = new FileInputStream("User.obj");
+            ObjectInputStream oIn = new ObjectInputStream(fIn);
+            Object o = oIn.readObject();
             return (User) o;
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -25,9 +26,10 @@ public class JavaSerializer {
 
     private static void writeToFile(Serializable s){
         try {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("User.obj"));
-            objectOutputStream.writeObject(s);
-            objectOutputStream.flush();
+            FileOutputStream out = new FileOutputStream("User.obj");
+            ObjectOutputStream objectOut = new ObjectOutputStream(out);
+            objectOut.writeObject(s);
+            objectOut.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
