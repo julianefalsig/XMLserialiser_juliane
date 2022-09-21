@@ -12,19 +12,11 @@ public class XMLServlet extends HttpServlet {
     XmlMapper mapper = new XmlMapper();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        User user = new User();
-        user.setPassWord("Test Pass");
-        user.setUserName("Test User");
-        String xmlString = mapper.writeValueAsString(user);
-        PrintWriter writer = resp.getWriter();
-        writer.write(xmlString);
-        writer.flush();
+        //TODO: Fill in
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        User user = mapper.readValue(req.getInputStream(), User.class);
-        System.out.println(user);
-        resp.getWriter().write("Tak for brugeren: " + user);
+       //TODO: Fill in
     }
 }
