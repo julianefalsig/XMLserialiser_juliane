@@ -5,7 +5,7 @@ public class JavaSerializer {
         User user = new User();
         user.setUserName("testUser");
         user.setPassWord("testPass");
-        writeToFile(user);
+        writeToFile(user);  // serialiserer
         System.out.println("Wrote file");
         System.out.println("Reading file");
         User loadedUser = readFromFile();

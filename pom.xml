@@ -8,6 +8,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>XMLserialiser</artifactId>
     <version>1</version>
     <packaging>war</packaging>
+
     <build>
         <plugins>
             <plugin>
@@ -19,6 +20,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                     <target>17</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -53,6 +55,53 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <artifactId>xercesImpl</artifactId>
             <version>2.12.2</version>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!-- Same as Above -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.3.4</version>
+            <scope>runtime</scope>
+        </dependency>
 
+    <!-- Servlet container (Jersey) -->
+    <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>3.0.6</version>
+    </dependency>
+    <!-- Injection manager -->
+    <dependency>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>3.0.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-common</artifactId>
+        <version>3.0.6</version>
+    </dependency>
+
+    <!-- Servlet API -->
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>5.0.0</version>
+    </dependency>
+    <!-- JAX-RS Rest specification -->
+    <dependency>
+        <groupId>jakarta.ws.rs</groupId>
+        <artifactId>jakarta.ws.rs-api</artifactId>
+        <version>3.1.0</version>
+    </dependency>
+    </dependencies>
 </project>
