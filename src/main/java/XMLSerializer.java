@@ -9,8 +9,8 @@ import java.io.IOException;
 public class XMLSerializer {
     public static void main(String[] args)  {
         User user = new User();
-        user.setUserName("testUser");
-        user.setPassWord("testPass");
+        user.setUserName("juliane");
+        user.setPassWord("hemmeligt password");
         XmlMapper mapper = new XmlMapper(); //opretter mapper-objekt
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -18,7 +18,6 @@ public class XMLSerializer {
             String xmlString = mapper.writeValueAsString(user);
             System.out.println(xmlString);  // udskriver xml strengen
             mapper.writeValue(new File("User.xml"),user); //gemmer det til en fil
-
             // kode som indlæser objektet fra XML
             User userFromXML = mapper.readValue(new File("User.xml"), User.class);
             System.out.println("Read from XML: ");

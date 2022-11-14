@@ -8,6 +8,7 @@ import jakarta.ws.rs.POST;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//servelet der kan sende noget XML
 @WebServlet(name = "xmlservlet", urlPatterns = "/api")
 public class XMLServlet extends HttpServlet {
     XmlMapper mapper = new XmlMapper();

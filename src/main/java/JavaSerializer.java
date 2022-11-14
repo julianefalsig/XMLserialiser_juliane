@@ -14,7 +14,7 @@ public class JavaSerializer {
 
     private static User readFromFile() {
         try {
-            FileInputStream fIn = new FileInputStream("User.obj");
+            FileInputStream fIn = new FileInputStream("User2.obj");
             ObjectInputStream oIn = new ObjectInputStream(fIn);
             Object o = oIn.readObject();
             return (User) o;
@@ -26,7 +26,7 @@ public class JavaSerializer {
 
     private static void writeToFile(Serializable s){
         try {
-            FileOutputStream out = new FileOutputStream("User.obj");
+            FileOutputStream out = new FileOutputStream("User2.obj");
             ObjectOutputStream objectOut = new ObjectOutputStream(out);
             objectOut.writeObject(s);
             objectOut.flush();

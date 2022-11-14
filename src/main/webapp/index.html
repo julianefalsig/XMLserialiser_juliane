@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient</title>
+
+</head>
+<body>
+
+<div id="patient">
+    </div>
+<button onclick="getPatient()">Hent patient</button>
+<script>
+    function getPatient(){
+        fetch("rest/patient")
+            .then(function (data){
+                data.name()
+                    .then(function("name"){
+                            alert("name")
+                        }
+                    )
+            })
+    }
+
+</script>
+</div>
+
+</body>
+</html>
